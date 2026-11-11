@@ -1,1 +1,565 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>University Student Information Portal</title>
+
+    <!-- QUESTION 4: CSS3 STYLING -->
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #123456;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        nav {
+            background-color: #234f70;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            padding: 15px 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: yellow;
+            text-decoration: underline;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px #ccc;
+        }
+
+        h2 {
+            color: #123456;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #999;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #234f70;
+            color: white;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        input, select {
+            padding: 10px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        .gender {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .form-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #123456;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2874a6;
+        }
+
+        #result {
+            margin-top: 15px;
+            color: green;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #123456;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* Responsive design */
+
+        @media screen and (max-width: 600px) {
+
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul li {
+                padding: 10px;
+            }
+
+            main {
+                grid-template-columns: 1fr;
+                padding: 10px;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            .form-buttons {
+                flex-direction: column;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- QUESTION 1: HEADER AND NAVIGATION -->
+
+    <header>
+        <h1>Masinde Muliro University of Science and Technology</h1>
+        <h2 style="color:white;">Student Information Portal</h2>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#registration">Student Registration</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <!-- HOME SECTION -->
+
+        <section id="home">
+
+            <h2>Welcome to the Student Portal</h2>
+
+            <p>
+                Welcome to Masinde Muliro University of Science
+                and Technology Student Information Portal.
+                Access student information and registration services.
+            </p>
+
+        </section>
+
+        <!-- QUESTION 2: ABOUT SECTION AND LIST -->
+
+        <section id="about">
+
+            <h2>About the Student Information Portal</h2>
+
+            <p>
+                The Student Information Portal is a web-based system
+                designed to manage student information, academic
+                programmes and registration details. It provides
+                students and university administrators with easy
+                access to academic information.
+            </p>
+
+            <h3>Academic Programmes Offered</h3>
+
+            <ul>
+                <li>Computer Security and Forensics</li>
+                <li>Computer Science</li>
+                <li>Information Technology</li>
+                <li>Electrical and Electronic Engineering</li>
+            </ul>
+
+        </section>
+
+        <!-- QUESTION 2: STUDENT INFORMATION TABLE -->
+
+        <section id="students">
+
+            <h2>Student Information Table</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Student Name</th>
+                        <th>Registration Number</th>
+                        <th>Programme</th>
+                        <th>Year of Study</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>001</td>
+                        <td>Mary Wanjiku</td>
+                        <td>CSF/001/2025</td>
+                        <td>Computer Security and Forensics</td>
+                        <td>Year 2</td>
+                    </tr>
+
+                    <tr>
+                        <td>002</td>
+                        <td>John Kamau</td>
+                        <td>CS/002/2025</td>
+                        <td>Computer Science</td>
+                        <td>Year 3</td>
+                    </tr>
+
+                    <tr>
+                        <td>003</td>
+                        <td>Grace Achieng</td>
+                        <td>IT/003/2025</td>
+                        <td>Information Technology</td>
+                        <td>Year 1</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- QUESTION 3: STUDENT REGISTRATION FORM -->
+
+        <section id="registration">
+
+            <h2>Student Registration Form</h2>
+
+            <form id="studentForm">
+
+                <label for="fullname">Full Name:</label>
+
+                <input
+                    type="text"
+                    id="fullname"
+                    name="fullname"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+                <label for="regnumber">Registration Number:</label>
+
+                <input
+                    type="text"
+                    id="regnumber"
+                    name="regnumber"
+                    placeholder="Enter registration number"
+                    required
+                >
+
+                <label for="email">Email Address:</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter email address"
+                    required
+                >
+
+                <label>Gender:</label>
+
+                <div class="gender">
+
+                    <input
+                        type="radio"
+                        name="gender"
+                        value="Male"
+                        required
+                    > Male
+
+                    <input
+                        type="radio"
+                        name="gender"
+                        value="Female"
+                    > Female
+
+                </div>
+
+                <label for="programme">Academic Programme:</label>
+
+                <select id="programme" name="programme" required>
+
+                    <option value="">Select Programme</option>
+
+                    <option value="Computer Security and Forensics">
+                        Computer Security and Forensics
+                    </option>
+
+                    <option value="Computer Science">
+                        Computer Science
+                    </option>
+
+                    <option value="Information Technology">
+                        Information Technology
+                    </option>
+
+                    <option value="Electrical Engineering">
+                        Electrical Engineering
+                    </option>
+
+                </select>
+
+                <div class="form-buttons">
+
+                    <button type="submit">Submit</button>
+
+                    <button type="reset">Reset</button>
+
+                </div>
+
+            </form>
+
+            <div id="result"></div>
+
+        </section>
+
+        <!-- CONTACT SECTION -->
+
+        <section id="contact">
+
+            <h2>Contact Us</h2>
+
+            <p>
+                Masinde Muliro University of Science and Technology
+            </p>
+
+            <p>
+                Email: info@mmust.ac.ke
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            &copy; 2026 Masinde Muliro University of Science
+            and Technology. All Rights Reserved.
+        </p>
+
+    </footer>
+
+    <!-- QUESTION 5, 6 AND 7: JAVASCRIPT -->
+
+    <script>
+
+        // QUESTION 5(a): DECLARING STUDENT VARIABLES
+
+        let studentName = "Mary Wanjiku";
+
+        let registrationNumber = "CSF/001/2025";
+
+        let academicProgramme = "Computer Security and Forensics";
+
+        console.log("Student Name: " + studentName);
+
+        console.log("Registration Number: " + registrationNumber);
+
+        console.log("Academic Programme: " + academicProgramme);
+
+        // QUESTION 5(b): CALCULATING STUDENT GRADE
+
+        function calculateGrade(score) {
+
+            if (score >= 70 && score <= 100) {
+
+                return "A";
+
+            }
+
+            else if (score >= 60 && score < 70) {
+
+                return "B";
+
+            }
+
+            else if (score >= 50 && score < 60) {
+
+                return "C";
+
+            }
+
+            else if (score >= 40 && score < 50) {
+
+                return "D";
+
+            }
+
+            else if (score >= 0 && score < 40) {
+
+                return "E";
+
+            }
+
+            else {
+
+                return "Invalid Score";
+
+            }
+
+        }
+
+        // QUESTION 5(c): CALLING THE FUNCTION
+
+        let grade = calculateGrade(75);
+
+        alert("Student Grade: " + grade);
+
+        // QUESTION 6(a): RETRIEVING THE REGISTRATION FORM
+
+        const studentForm = document.getElementById("studentForm");
+
+        // QUESTION 6(b): ADDING AN EVENT LISTENER
+
+        studentForm.addEventListener("submit", function(event) {
+
+            // Prevent automatic form submission
+
+            event.preventDefault();
+
+            // QUESTION 6(c): RETRIEVING STUDENT INFORMATION
+
+            const name = document.getElementById("fullname").value.trim();
+
+            const regNo = document.getElementById("regnumber").value.trim();
+
+            const email = document.getElementById("email").value.trim();
+
+            // QUESTION 7(a): VALIDATING FULL NAME
+
+            if (name === "") {
+
+                alert("Please enter your full name.");
+
+                return;
+
+            }
+
+            // QUESTION 7(a): VALIDATING REGISTRATION NUMBER
+
+            if (regNo === "") {
+
+                alert("Please enter your registration number.");
+
+                return;
+
+            }
+
+            // QUESTION 7(b): VALIDATING EMAIL ADDRESS
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailPattern.test(email)) {
+
+                alert("Please enter a valid email address.");
+
+                return;
+
+            }
+
+            // RETRIEVING GENDER AND PROGRAMME
+
+            const gender = document.querySelector(
+                'input[name="gender"]:checked'
+            ).value;
+
+            const programme = document.getElementById("programme").value;
+
+            // DISPLAYING STUDENT INFORMATION ON THE WEBPAGE
+
+            document.getElementById("result").innerHTML =
+
+                "<h3>Registration Successful!</h3>" +
+
+                "<p>Student Name: " + name + "</p>" +
+
+                "<p>Registration Number: " + regNo + "</p>" +
+
+                "<p>Email Address: " + email + "</p>" +
+
+                "<p>Gender: " + gender + "</p>" +
+
+                "<p>Academic Programme: " + programme + "</p>";
+
+            // QUESTION 6(d): DISPLAYING SUCCESS MESSAGE
+
+            alert("Student registered successfully!");
+
+        });
+
+        // CLEAR PREVIOUS RESULT WHEN RESET BUTTON IS CLICKED
+
+        studentForm.addEventListener("reset", function() {
+
+            document.getElementById("result").innerHTML = "";
+
+        });
+
+    </script>
+
+</body>
+
+</html>
